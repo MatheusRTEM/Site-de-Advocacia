@@ -162,14 +162,14 @@ export const Hero: React.FC<HeroProps> = ({
                 <ArrowRight className="w-4 h-4 text-amber-400 group-hover:translate-x-1 transition-transform" />
               </button>
 
-              {/* Quick AI Assist CTA */}
+              {/* Initial guidance shortcut */}
               <p className="text-[11px] text-center text-slate-500 mt-3">
                 Dúvidas sobre qual área se encaixa no seu caso?{' '}
                 <button 
                   onClick={onOpenAssistant}
                   className="text-amber-400 underline hover:text-amber-300 font-medium"
                 >
-                  Fazer triagem virtual gratuita
+                  Consultar orientação inicial
                 </button>
               </p>
             </div>

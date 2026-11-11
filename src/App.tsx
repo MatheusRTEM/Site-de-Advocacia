@@ -218,7 +218,7 @@ export default function App() {
         onLoginSuccess={handleLoginSuccess}
       />
 
-      {/* AI Pre-Triagem Modal */}
+      {/* Initial guidance modal */}
       <LegalAssistantModal
         isOpen={isAssistantOpen}
         onClose={() => setIsAssistantOpen(false)}

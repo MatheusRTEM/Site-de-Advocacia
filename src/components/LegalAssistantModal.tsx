@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { 
   X, 
-  Sparkles, 
+  HelpCircle,
   Scale, 
   FileCheck, 
   UserCheck, 
   Calendar, 
   ArrowRight, 
-  MessageSquare,
-  HelpCircle
+  MessageSquare
 } from 'lucide-react';
 import { Lawyer, Service } from '../types';
 
@@ -120,14 +119,14 @@ export const LegalAssistantModal: React.FC<LegalAssistantModalProps> = ({
         {/* Modal Header */}
         <div className="flex items-center gap-2.5 mb-4">
           <div className="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400">
-            <Sparkles className="w-5 h-5 animate-pulse" />
+            <HelpCircle className="w-5 h-5" />
           </div>
           <div>
             <h2 className="font-['Cinzel'] text-xl font-bold text-white">
-              Triagem Virtual & Orientação Prévia
+              Orientação Inicial
             </h2>
             <p className="text-xs text-slate-400">
-              Descubra a especialidade adequada e documentos recomendados antes de sua consulta.
+              Consulte a área de atuação e os documentos que podem ser úteis para sua consulta.
             </p>
           </div>
         </div>
@@ -174,7 +173,7 @@ export const LegalAssistantModal: React.FC<LegalAssistantModalProps> = ({
                   onClick={() => handleAnalyze()}
                   className="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-semibold text-xs transition-colors shrink-0"
                 >
-                  Analisar
+                  Ver orientação
                 </button>
               </div>
             </div>
@@ -184,7 +183,7 @@ export const LegalAssistantModal: React.FC<LegalAssistantModalProps> = ({
             {/* Analysis Box */}
             <div className="bg-slate-950 p-4 rounded-xl border border-amber-500/30 space-y-3 text-xs">
               <div className="flex items-center justify-between border-b border-slate-800 pb-2">
-                <span className="font-bold text-amber-400 uppercase tracking-wider text-[11px]">Diagnóstico de Triagem</span>
+                <span className="font-bold text-amber-400 uppercase tracking-wider text-[11px]">Resumo preliminar</span>
                 <span className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase ${
                   analysisResult.urgency === 'Alta' ? 'bg-red-500/20 text-red-300' : 'bg-amber-500/20 text-amber-300'
                 }`}>
@@ -197,6 +196,10 @@ export const LegalAssistantModal: React.FC<LegalAssistantModalProps> = ({
                 <strong className="text-white text-sm">{analysisResult.area}</strong>
                 <p className="text-slate-300 mt-1 leading-relaxed">{analysisResult.summary}</p>
               </div>
+
+              <p className="text-[11px] text-slate-500 leading-relaxed">
+                Esta sugestão é apenas informativa e não substitui a análise individual de um advogado.
+              </p>
 
               {/* Recommended Lawyer */}
               <div className="p-3 rounded-lg bg-slate-900 border border-slate-800 flex items-center gap-3">

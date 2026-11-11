@@ -10,7 +10,7 @@ import {
   LogIn, 
   LogOut, 
   Instagram, 
-  Sparkles,
+  HelpCircle,
   MapPin
 } from 'lucide-react';
 import { User, Lawyer } from '../types';
@@ -138,13 +138,13 @@ export const Navbar: React.FC<NavbarProps> = ({
             Contato & Endereço
           </button>
 
-          {/* AI Pre-Triagem Button */}
+          {/* Initial guidance button */}
           <button
             onClick={onOpenAssistant}
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-semibold transition-all duration-200"
           >
-            <Sparkles className="w-3.5 h-3.5 text-amber-400 animate-pulse" />
-            <span>Triagem de Caso</span>
+            <HelpCircle className="w-3.5 h-3.5 text-amber-400" />
+            <span>Orientação Inicial</span>
           </button>
         </nav>
 
@@ -276,8 +276,8 @@ export const Navbar: React.FC<NavbarProps> = ({
               }}
               className="flex items-center gap-2 text-left px-3 py-2 text-amber-300 bg-amber-950/40 border border-amber-500/30 rounded-md font-medium"
             >
-              <Sparkles className="w-4 h-4 text-amber-400" />
-              Triagem de Caso Virtual
+              <HelpCircle className="w-4 h-4 text-amber-400" />
+              Orientação Inicial
             </button>
           </div>
 

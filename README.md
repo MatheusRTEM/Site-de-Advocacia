@@ -8,7 +8,7 @@ Plataforma web para o escritório Moraes & Associados, com apresentação de ser
 - Agendamento e acompanhamento de consultas.
 - Área do cliente com notificações.
 - Painel administrativo para gestão de consultas e conteúdo.
-- Assistente jurídico integrado à interface.
+- Ferramenta de orientação inicial por assunto.
 
 ## Tecnologias
 
